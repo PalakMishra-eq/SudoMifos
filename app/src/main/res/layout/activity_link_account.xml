@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spinnerBanks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/select_bank" />
+
+    <LinearLayout
+        android:id="@+id/bankDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editTextAccountHolderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Account Holder Name" />
+
+        <EditText
+            android:id="@+id/editTextAccountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Account Number"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editTextIFSC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IFSC Code" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonLinkAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Link Account"
+        android:visibility="gone" />
+</LinearLayout>
