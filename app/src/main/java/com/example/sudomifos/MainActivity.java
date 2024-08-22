@@ -18,27 +18,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etName = findViewById(R.id.etName);
-        etEmail = findViewById(R.id.etEmail);
-        etPassword = findViewById(R.id.etPassword);
+
         Button registerButton = findViewById(R.id.registerButton);
 
         registerButton.setOnClickListener(v -> {
-            String name = etName.getText().toString();
-            String email = etEmail.getText().toString();
-            String password = etPassword.getText().toString();
 
             // TODO: Validate inputs and send OTP
 
-            Intent intent = new Intent(MainActivity.this, OTP.class);
-            intent.putExtra("email", email);
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            //intent.putExtra("email", email);
             startActivity(intent);
         });
+
+        Button loginButton = findViewById(R.id.loginButton);
+
+        loginButton.setOnClickListener(v -> {
+
+
+            // TODO: Validate inputs and send OTP
+
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            //intent.putExtra("email", email);
+            startActivity(intent);
+        });
+
+
     }
-//    private void openWelcomeScreen() {
-//        String username = usernameEditText.getText().toString();
-//        Intent intent = new Intent(this, WelcomeActivity.class);
-//        intent.putExtra("username", username);
-//        startActivity(intent);
+
     }
 

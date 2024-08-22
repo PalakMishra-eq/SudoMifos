@@ -2,6 +2,7 @@ package com.example.sudomifos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,6 +19,8 @@ public class LinkAccountActivity extends AppCompatActivity {
     private LinearLayout bankDetailsLayout;
     private EditText editTextAccountHolderName, editTextAccountNumber, editTextIFSC;
     private Button buttonLinkAccount;
+
+    private static final String TAG = "LinkAccountActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,11 +67,16 @@ public class LinkAccountActivity extends AppCompatActivity {
                 String accountNumber = editTextAccountNumber.getText().toString();
                 String ifscCode = editTextIFSC.getText().toString();
 
-                Intent intent = new Intent(LinkAccountActivity.this, NextActivity.class);
-                intent.putExtra("accountHolderName", accountHolderName);
-                intent.putExtra("accountNumber", accountNumber);
-                intent.putExtra("ifscCode", ifscCode);
-                startActivity(intent);
+                Log.d(TAG, "Account Holder Name: "+ accountHolderName);
+                Log.d(TAG, "Account Number: "+ accountNumber);
+                Log.d(TAG, "Account ifscode: "+ ifscCode);
+
+//                Intent intent = new Intent(LinkAccountActivity.this, NextActivity.class);
+//                intent.putExtra("accountHolderName", accountHolderName);
+//                intent.putExtra("accountNumber", accountNumber);
+//                intent.putExtra("ifscCode", ifscCode);
+//                startActivity(intent);
+
             }
         });
     }

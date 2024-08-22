@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <EditText
             android:id="@+id/editTextAccountHolderName"
@@ -43,5 +43,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Link Account"
-        android:visibility="gone" />
+        android:visibility="visible" />
 </LinearLayout>
